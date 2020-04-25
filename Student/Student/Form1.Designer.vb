@@ -171,19 +171,19 @@ Partial Class Form1
         'AddToolStripMenuItem
         '
         Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
-        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(171, 26)
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.AddToolStripMenuItem.Text = "Add"
         '
         'ViewToolStripMenuItem3
         '
         Me.ViewToolStripMenuItem3.Name = "ViewToolStripMenuItem3"
-        Me.ViewToolStripMenuItem3.Size = New System.Drawing.Size(171, 26)
+        Me.ViewToolStripMenuItem3.Size = New System.Drawing.Size(224, 26)
         Me.ViewToolStripMenuItem3.Text = "View"
         '
         'ManageToolStripMenuItem3
         '
         Me.ManageToolStripMenuItem3.Name = "ManageToolStripMenuItem3"
-        Me.ManageToolStripMenuItem3.Size = New System.Drawing.Size(171, 26)
+        Me.ManageToolStripMenuItem3.Size = New System.Drawing.Size(224, 26)
         Me.ManageToolStripMenuItem3.Text = "Manage"
         '
         'PrintReportToolStripMenuItem3

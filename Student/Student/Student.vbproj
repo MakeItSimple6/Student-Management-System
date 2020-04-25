@@ -89,6 +89,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="attendance_manage.Designer.vb">
+      <DependentUpon>attendance_manage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="attendance_manage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="attendance_report.Designer.vb">
       <DependentUpon>attendance_report.vb</DependentUpon>
     </Compile>
@@ -160,6 +166,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="attendance_manage.resx">
+      <DependentUpon>attendance_manage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="attendance_report.resx">
       <DependentUpon>attendance_report.vb</DependentUpon>
     </EmbeddedResource>

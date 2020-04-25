@@ -78,3 +78,4 @@ C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Stude
 C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Student.student_manage.resources
 C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Student.student_view.resources
 C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Student.attendance_report.resources
+C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Student.attendance_manage.resources

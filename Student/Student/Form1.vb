@@ -33,4 +33,9 @@
         'Attendace Report
         attendance_report.Show()
     End Sub
+
+    Private Sub ManageToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles ManageToolStripMenuItem3.Click
+        'Attendance Report
+        attendance_manage.Show()
+    End Sub
 End Class

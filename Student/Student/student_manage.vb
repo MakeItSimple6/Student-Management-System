@@ -30,14 +30,11 @@ Public Class student_manage
     Dim Imagepath As String
     Private Sub manage_student_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Form Load'
-        Me.StudentTableAdapter.Fill(Me.StudentDataSet1.student)
-
         DirectCast(DataGridView1.Columns(7), DataGridViewImageColumn).ImageLayout = DataGridViewImageCellLayout.Stretch
         DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
 
         Try
-
-
+            Me.StudentTableAdapter.Fill(Me.StudentDataSet1.student)
             For i As Integer = 0 To DataGridView1.RowCount - 1
                 If i Mod 2 = 0 Then
                     DataGridView1.Rows(i).DefaultCellStyle.BackColor = Color.AliceBlue
