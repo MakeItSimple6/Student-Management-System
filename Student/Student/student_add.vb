@@ -1,7 +1,7 @@
 ﻿Imports System.IO
 Imports System.Data.OleDb
 
-Public Class add_student
+Public Class student_add
     Dim bytImage() As Byte
     Private abyt As Byte()
     Dim con As New OleDbConnection

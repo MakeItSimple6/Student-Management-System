@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class view_student
+Partial Class student_view
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -27,10 +27,6 @@ Partial Class view_student
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.StudentDataSet1 = New Student.studentDataSet1()
-        Me.StudentDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.StudentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.StudentTableAdapter = New Student.studentDataSet1TableAdapters.studentTableAdapter()
         Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.StudentnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CourseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,10 +35,14 @@ Partial Class view_student
         Me.PhonenoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ImageDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.StudentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StudentDataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StudentDataSet1 = New Student.studentDataSet1()
+        Me.StudentTableAdapter = New Student.studentDataSet1TableAdapters.studentTableAdapter()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.StudentDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.StudentDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StudentDataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StudentDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -86,25 +86,6 @@ Partial Class view_student
         Me.DataGridView1.RowTemplate.Height = 170
         Me.DataGridView1.Size = New System.Drawing.Size(1589, 801)
         Me.DataGridView1.TabIndex = 0
-        '
-        'StudentDataSet1
-        '
-        Me.StudentDataSet1.DataSetName = "studentDataSet1"
-        Me.StudentDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'StudentDataSet1BindingSource
-        '
-        Me.StudentDataSet1BindingSource.DataSource = Me.StudentDataSet1
-        Me.StudentDataSet1BindingSource.Position = 0
-        '
-        'StudentBindingSource
-        '
-        Me.StudentBindingSource.DataMember = "student"
-        Me.StudentBindingSource.DataSource = Me.StudentDataSet1BindingSource
-        '
-        'StudentTableAdapter
-        '
-        Me.StudentTableAdapter.ClearBeforeFill = True
         '
         'IDDataGridViewTextBoxColumn
         '
@@ -162,6 +143,25 @@ Partial Class view_student
         Me.ImageDataGridViewImageColumn.MinimumWidth = 6
         Me.ImageDataGridViewImageColumn.Name = "ImageDataGridViewImageColumn"
         '
+        'StudentBindingSource
+        '
+        Me.StudentBindingSource.DataMember = "student"
+        Me.StudentBindingSource.DataSource = Me.StudentDataSet1BindingSource
+        '
+        'StudentDataSet1BindingSource
+        '
+        Me.StudentDataSet1BindingSource.DataSource = Me.StudentDataSet1
+        Me.StudentDataSet1BindingSource.Position = 0
+        '
+        'StudentDataSet1
+        '
+        Me.StudentDataSet1.DataSetName = "studentDataSet1"
+        Me.StudentDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'StudentTableAdapter
+        '
+        Me.StudentTableAdapter.ClearBeforeFill = True
+        '
         'view_student
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -169,11 +169,11 @@ Partial Class view_student
         Me.ClientSize = New System.Drawing.Size(1589, 801)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "view_student"
-        Me.Text = "view_student"
+        Me.Text = "Student View"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.StudentDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.StudentDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StudentDataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StudentDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

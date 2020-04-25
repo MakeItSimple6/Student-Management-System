@@ -1,26 +1,36 @@
 ﻿Public Class Form1
     Private Sub AddNewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewToolStripMenuItem.Click
-        'Add Student'
-        add_student.Show()
+        'Student Add 
+        student_add.Show()
     End Sub
 
     Private Sub ViewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem.Click
-        'View Student'
-        view_student.Show()
+        'Student View 
+        student_view.Show()
     End Sub
 
     Private Sub ManageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ManageToolStripMenuItem.Click
-        'Manage Student'
-        manage_student.Show()
+        'Student Manage 
+        student_manage.Show()
     End Sub
 
     Private Sub PrintReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintReportToolStripMenuItem.Click
-        'Student Report'
+        'Student Report
         student_report.Show()
     End Sub
 
     Private Sub AddToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddToolStripMenuItem.Click
-        'add Attendace 
+        'Attendace add 
         attendance_add.Show()
+    End Sub
+
+    Private Sub ViewToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem3.Click
+        'Attendace View'
+        attendance_view.Show()
+    End Sub
+
+    Private Sub PrintReportToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles PrintReportToolStripMenuItem3.Click
+        'Attendace Report
+        attendance_report.Show()
     End Sub
 End Class

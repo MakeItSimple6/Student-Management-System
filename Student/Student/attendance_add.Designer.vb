@@ -55,7 +55,7 @@ Partial Class attendance_add
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.CustomFormat = "dd/mm/yyyy"
+        Me.DateTimePicker1.CustomFormat = "dd-mm-yyyy"
         Me.DateTimePicker1.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Location = New System.Drawing.Point(193, 197)
         Me.DateTimePicker1.MaxDate = New Date(2021, 12, 31, 0, 0, 0, 0)
@@ -275,6 +275,7 @@ Partial Class attendance_add
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "attendance_add"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Add Student Attendance"
         Me.ResumeLayout(False)
         Me.PerformLayout()

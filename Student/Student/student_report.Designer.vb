@@ -24,35 +24,36 @@ Partial Class student_report
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.StudentDataSet1 = New Student.studentDataSet1()
         Me.StudentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StudentDataSet1 = New Student.studentDataSet1()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.StudentTableAdapter = New Student.studentDataSet1TableAdapters.studentTableAdapter()
-        CType(Me.StudentDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StudentDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ReportViewer1
+        'StudentBindingSource
         '
-        ReportDataSource1.Name = "DataSet1"
-        ReportDataSource1.Value = Me.StudentBindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Student.Report1.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(1, -1)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(1106, 553)
-        Me.ReportViewer1.TabIndex = 3
+        Me.StudentBindingSource.DataMember = "student"
+        Me.StudentBindingSource.DataSource = Me.StudentDataSet1
         '
         'StudentDataSet1
         '
         Me.StudentDataSet1.DataSetName = "studentDataSet1"
         Me.StudentDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'StudentBindingSource
+        'ReportViewer1
         '
-        Me.StudentBindingSource.DataMember = "student"
-        Me.StudentBindingSource.DataSource = Me.StudentDataSet1
+        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        ReportDataSource1.Name = "DataSet1"
+        ReportDataSource1.Value = Me.StudentBindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Student.student_report.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.ServerReport.BearerToken = Nothing
+        Me.ReportViewer1.Size = New System.Drawing.Size(1110, 553)
+        Me.ReportViewer1.TabIndex = 3
         '
         'StudentTableAdapter
         '
@@ -66,8 +67,8 @@ Partial Class student_report
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "student_report"
         Me.Text = "student_report"
-        CType(Me.StudentDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StudentDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

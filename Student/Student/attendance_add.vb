@@ -33,14 +33,24 @@ Public Class attendance_add
         'refresh current time'
         gettime()
     End Sub
+
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         'Attendance Add'
         Try
             With con
                 .ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Kamar\Desktop\Student Management System\student.accdb"
                 .Open()
-                If DateTimePicker1.Value.Date <> get_date Then
-                    With command
+                With command
+                    .Connection = con
+                    'Getting date from particular Student'  
+                    get_date = "01-01-2000"
+                    .CommandText = "Select [date_] from attendance where [student_id]=" + ComboBox1.Text + " and [date_] like '%" + DateTimePicker1.Value + "%'"
+                    Dim date_reader = .ExecuteReader
+                    While date_reader.Read
+                        get_date = date_reader("date_")
+                    End While
+                    date_reader.Close()
+                    If DateTimePicker1.Value.Date <> get_date Then
                         .Connection = con
                         .CommandText = "insert into attendance([student_id],[status],[date_],[time_in],[time_out],[course])
                                             values(@student_id,@status,@date,@time_in,@time_out,@course)"
@@ -53,17 +63,18 @@ Public Class attendance_add
                         .Parameters.AddWithValue("@course", Label7.Text)
 
                         .ExecuteNonQuery()
-                        MsgBox("Attendance add for Student Id : " & ComboBox1.Text & " successfully!")
+                        MsgBox("Attendance addED for Student Id : " & ComboBox1.Text & " successfully!")
                         con.Close()
                         .Dispose()
-                    End With
-                Else
-                    MsgBox("You already completed for Student Id : " & ComboBox1.Text, MessageBoxIcon.Information)
-                    .Close()
-                End If
+                    Else
+                        MsgBox("You already completed for Student Id : " & ComboBox1.Text, MessageBoxIcon.Information)
+                        con.Close()
+                    End If
+                End With
             End With
         Catch ex As Exception
             MsgBox("Error : " + ex.Message.ToString(), MessageBoxIcon.Error)
+            con.Close()
         End Try
     End Sub
     Private Sub course_value(sender As Object, e As EventArgs) Handles ComboBox1.SelectedValueChanged
@@ -83,16 +94,6 @@ Public Class attendance_add
                     Label7.Text = reader2("course")
                 End While
                 reader2.Close()
-
-                'Getting date from particular student'
-                get_date = "01-01-2000 00:00:00"
-                .CommandText = "Select [date_] from attendance where student_id=" + ComboBox1.Text + ""
-                Dim date_reader = .ExecuteReader
-                While date_reader.Read
-                    get_date = date_reader("date_")
-                    TextBox2.Text = get_date
-                End While
-                date_reader.Close()
             End With
             .Close()
             command.Dispose()

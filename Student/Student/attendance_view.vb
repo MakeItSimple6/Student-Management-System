@@ -1,10 +1,8 @@
-﻿'Some changes has done in Form Load'
-
-Public Class view_student
-    Private Sub view_student_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Form Load'
+﻿Public Class attendance_view
+    Private Sub attendance_view_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Attendance View Form Load
         Try
-            Me.StudentTableAdapter.Fill(Me.StudentDataSet1.student)
+            Me.AttendanceTableAdapter.Fill(Me.StudentDataSet1.attendance)
 
             For i As Integer = 0 To DataGridView1.RowCount - 1
                 If i Mod 2 = 0 Then
@@ -17,8 +15,6 @@ Public Class view_student
             MessageBox.Show("Error : " + ex.Message.ToString())
         End Try
 
-        'This one is add new to DataGridView show that the image now will be visible to full size'
-        DirectCast(DataGridView1.Columns(6), DataGridViewImageColumn).ImageLayout = DataGridViewImageCellLayout.Stretch
         DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
     End Sub
 End Class

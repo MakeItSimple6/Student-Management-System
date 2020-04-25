@@ -89,16 +89,28 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="add_student.Designer.vb">
-      <DependentUpon>add_student.vb</DependentUpon>
+    <Compile Include="attendance_report.Designer.vb">
+      <DependentUpon>attendance_report.vb</DependentUpon>
     </Compile>
-    <Compile Include="add_student.vb">
+    <Compile Include="attendance_report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="student_add.Designer.vb">
+      <DependentUpon>student_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="student_add.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="attendance_add.Designer.vb">
       <DependentUpon>attendance_add.vb</DependentUpon>
     </Compile>
     <Compile Include="attendance_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="attendance_view.Designer.vb">
+      <DependentUpon>attendance_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="attendance_view.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -108,10 +120,10 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="manage_student.Designer.vb">
-      <DependentUpon>manage_student.vb</DependentUpon>
+    <Compile Include="student_manage.Designer.vb">
+      <DependentUpon>student_manage.vb</DependentUpon>
     </Compile>
-    <Compile Include="manage_student.vb">
+    <Compile Include="student_manage.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -140,25 +152,32 @@
     <Compile Include="student_report.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view_student.Designer.vb">
-      <DependentUpon>view_student.vb</DependentUpon>
+    <Compile Include="student_view.Designer.vb">
+      <DependentUpon>student_view.vb</DependentUpon>
     </Compile>
-    <Compile Include="view_student.vb">
+    <Compile Include="student_view.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="add_student.resx">
-      <DependentUpon>add_student.vb</DependentUpon>
+    <EmbeddedResource Include="attendance_report.resx">
+      <DependentUpon>attendance_report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="attendance_report.rdlc" />
+    <EmbeddedResource Include="student_add.resx">
+      <DependentUpon>student_add.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="attendance_add.resx">
       <DependentUpon>attendance_add.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="attendance_view.resx">
+      <DependentUpon>attendance_view.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="manage_student.resx">
-      <DependentUpon>manage_student.vb</DependentUpon>
+    <EmbeddedResource Include="student_manage.resx">
+      <DependentUpon>student_manage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -166,12 +185,12 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="student_report.rdlc" />
     <EmbeddedResource Include="student_report.resx">
       <DependentUpon>student_report.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view_student.resx">
-      <DependentUpon>view_student.vb</DependentUpon>
+    <EmbeddedResource Include="student_view.resx">
+      <DependentUpon>student_view.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

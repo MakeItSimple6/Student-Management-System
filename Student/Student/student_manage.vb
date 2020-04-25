@@ -20,7 +20,7 @@ Imports System.Runtime.CompilerServices
 'you can permanently delete the data from the database using delete button
 'other parts are common..
 
-Public Class manage_student
+Public Class student_manage
     Dim img As Byte()
     Dim bytImage() As Byte
     Private abyt As Byte()
