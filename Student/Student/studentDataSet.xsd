@@ -39,8 +39,9 @@
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, student_name, dob, gender, phone_no, address, [image] FROM student</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, student_name, dob, gender, phone_no, address, [image]
+FROM     student</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -86,7 +87,7 @@
   <xs:element name="studentDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="studentDataSet" msprop:Generator_UserDSName="studentDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="student" msprop:Generator_TableClassName="studentDataTable" msprop:Generator_TableVarName="tablestudent" msprop:Generator_TablePropName="student" msprop:Generator_RowDeletingName="studentRowDeleting" msprop:Generator_RowChangingName="studentRowChanging" msprop:Generator_RowEvHandlerName="studentRowChangeEventHandler" msprop:Generator_RowDeletedName="studentRowDeleted" msprop:Generator_UserTableName="student" msprop:Generator_RowChangedName="studentRowChanged" msprop:Generator_RowEvArgName="studentRowChangeEvent" msprop:Generator_RowClassName="studentRow">
+        <xs:element name="student" msprop:Generator_TableClassName="studentDataTable" msprop:Generator_TableVarName="tablestudent" msprop:Generator_RowChangedName="studentRowChanged" msprop:Generator_TablePropName="student" msprop:Generator_RowDeletingName="studentRowDeleting" msprop:Generator_RowChangingName="studentRowChanging" msprop:Generator_RowEvHandlerName="studentRowChangeEventHandler" msprop:Generator_RowDeletedName="studentRowDeleted" msprop:Generator_RowClassName="studentRow" msprop:Generator_UserTableName="student" msprop:Generator_RowEvArgName="studentRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />

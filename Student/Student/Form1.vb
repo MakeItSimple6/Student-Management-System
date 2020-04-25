@@ -13,4 +13,9 @@
         'Manage Student'
         manage_student.Show()
     End Sub
+
+    Private Sub PrintReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintReportToolStripMenuItem.Click
+        'Student Report'
+        student_report.Show()
+    End Sub
 End Class
