@@ -33,7 +33,6 @@ Public Class attendance_add
         'refresh current time'
         gettime()
     End Sub
-
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         'Attendance Add'
         Try
@@ -63,7 +62,7 @@ Public Class attendance_add
                         .Parameters.AddWithValue("@course", Label7.Text)
 
                         .ExecuteNonQuery()
-                        MsgBox("Attendance addED for Student Id : " & ComboBox1.Text & " successfully!")
+                        MsgBox("Attendance added for Student Id : " & ComboBox1.Text & " successfully!")
                         con.Close()
                         .Dispose()
                     Else
@@ -79,7 +78,7 @@ Public Class attendance_add
     End Sub
     Private Sub course_value(sender As Object, e As EventArgs) Handles ComboBox1.SelectedValueChanged
         'Course Name' 
-        'This block is for selected the specific student course using hie student id.
+        'This block is for selected the specific student course using the student id.
         With con
             .ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Kamar\Desktop\Student Management System\student.accdb"
             .Open()

@@ -27,6 +27,16 @@ Partial Class student_manage
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StudentnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CourseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DobDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.GenderDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PhonenoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ImageDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.StudentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StudentDataSet1 = New Student.studentDataSet1()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -52,21 +62,11 @@ Partial Class student_manage
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.StudentDataSet1 = New Student.studentDataSet1()
-        Me.StudentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.StudentTableAdapter = New Student.studentDataSet1TableAdapters.studentTableAdapter()
-        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.StudentnameDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CourseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DobDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GenderDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PhonenoDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AddressDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ImageDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.StudentDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StudentDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -109,6 +109,72 @@ Partial Class student_manage
         Me.DataGridView1.RowTemplate.Height = 170
         Me.DataGridView1.Size = New System.Drawing.Size(932, 582)
         Me.DataGridView1.TabIndex = 1
+        '
+        'IDDataGridViewTextBoxColumn
+        '
+        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
+        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.IDDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
+        '
+        'StudentnameDataGridViewTextBoxColumn
+        '
+        Me.StudentnameDataGridViewTextBoxColumn.DataPropertyName = "student_name"
+        Me.StudentnameDataGridViewTextBoxColumn.HeaderText = "NAME"
+        Me.StudentnameDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.StudentnameDataGridViewTextBoxColumn.Name = "StudentnameDataGridViewTextBoxColumn"
+        '
+        'CourseDataGridViewTextBoxColumn
+        '
+        Me.CourseDataGridViewTextBoxColumn.DataPropertyName = "course"
+        Me.CourseDataGridViewTextBoxColumn.HeaderText = "COURSE"
+        Me.CourseDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.CourseDataGridViewTextBoxColumn.Name = "CourseDataGridViewTextBoxColumn"
+        '
+        'DobDataGridViewTextBoxColumn
+        '
+        Me.DobDataGridViewTextBoxColumn.DataPropertyName = "dob"
+        Me.DobDataGridViewTextBoxColumn.HeaderText = "DOB"
+        Me.DobDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.DobDataGridViewTextBoxColumn.Name = "DobDataGridViewTextBoxColumn"
+        '
+        'GenderDataGridViewTextBoxColumn
+        '
+        Me.GenderDataGridViewTextBoxColumn.DataPropertyName = "gender"
+        Me.GenderDataGridViewTextBoxColumn.HeaderText = "GENDER"
+        Me.GenderDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.GenderDataGridViewTextBoxColumn.Name = "GenderDataGridViewTextBoxColumn"
+        '
+        'PhonenoDataGridViewTextBoxColumn
+        '
+        Me.PhonenoDataGridViewTextBoxColumn.DataPropertyName = "phone_no"
+        Me.PhonenoDataGridViewTextBoxColumn.HeaderText = "NUMBER"
+        Me.PhonenoDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.PhonenoDataGridViewTextBoxColumn.Name = "PhonenoDataGridViewTextBoxColumn"
+        '
+        'AddressDataGridViewTextBoxColumn
+        '
+        Me.AddressDataGridViewTextBoxColumn.DataPropertyName = "address"
+        Me.AddressDataGridViewTextBoxColumn.HeaderText = "ADDRESS"
+        Me.AddressDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.AddressDataGridViewTextBoxColumn.Name = "AddressDataGridViewTextBoxColumn"
+        '
+        'ImageDataGridViewImageColumn
+        '
+        Me.ImageDataGridViewImageColumn.DataPropertyName = "image"
+        Me.ImageDataGridViewImageColumn.HeaderText = "PROFILE"
+        Me.ImageDataGridViewImageColumn.MinimumWidth = 6
+        Me.ImageDataGridViewImageColumn.Name = "ImageDataGridViewImageColumn"
+        '
+        'StudentBindingSource
+        '
+        Me.StudentBindingSource.DataMember = "student"
+        Me.StudentBindingSource.DataSource = Me.StudentDataSet1
+        '
+        'StudentDataSet1
+        '
+        Me.StudentDataSet1.DataSetName = "studentDataSet1"
+        Me.StudentDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'TextBox4
         '
@@ -383,77 +449,11 @@ Partial Class student_manage
         Me.TextBox6.Size = New System.Drawing.Size(248, 35)
         Me.TextBox6.TabIndex = 57
         '
-        'StudentDataSet1
-        '
-        Me.StudentDataSet1.DataSetName = "studentDataSet1"
-        Me.StudentDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'StudentBindingSource
-        '
-        Me.StudentBindingSource.DataMember = "student"
-        Me.StudentBindingSource.DataSource = Me.StudentDataSet1
-        '
         'StudentTableAdapter
         '
         Me.StudentTableAdapter.ClearBeforeFill = True
         '
-        'IDDataGridViewTextBoxColumn
-        '
-        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
-        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IDDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
-        '
-        'StudentnameDataGridViewTextBoxColumn
-        '
-        Me.StudentnameDataGridViewTextBoxColumn.DataPropertyName = "student_name"
-        Me.StudentnameDataGridViewTextBoxColumn.HeaderText = "NAME"
-        Me.StudentnameDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.StudentnameDataGridViewTextBoxColumn.Name = "StudentnameDataGridViewTextBoxColumn"
-        '
-        'CourseDataGridViewTextBoxColumn
-        '
-        Me.CourseDataGridViewTextBoxColumn.DataPropertyName = "course"
-        Me.CourseDataGridViewTextBoxColumn.HeaderText = "COURSE"
-        Me.CourseDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.CourseDataGridViewTextBoxColumn.Name = "CourseDataGridViewTextBoxColumn"
-        '
-        'DobDataGridViewTextBoxColumn
-        '
-        Me.DobDataGridViewTextBoxColumn.DataPropertyName = "dob"
-        Me.DobDataGridViewTextBoxColumn.HeaderText = "DOB"
-        Me.DobDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.DobDataGridViewTextBoxColumn.Name = "DobDataGridViewTextBoxColumn"
-        '
-        'GenderDataGridViewTextBoxColumn
-        '
-        Me.GenderDataGridViewTextBoxColumn.DataPropertyName = "gender"
-        Me.GenderDataGridViewTextBoxColumn.HeaderText = "GENDER"
-        Me.GenderDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.GenderDataGridViewTextBoxColumn.Name = "GenderDataGridViewTextBoxColumn"
-        '
-        'PhonenoDataGridViewTextBoxColumn
-        '
-        Me.PhonenoDataGridViewTextBoxColumn.DataPropertyName = "phone_no"
-        Me.PhonenoDataGridViewTextBoxColumn.HeaderText = "NUMBER"
-        Me.PhonenoDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.PhonenoDataGridViewTextBoxColumn.Name = "PhonenoDataGridViewTextBoxColumn"
-        '
-        'AddressDataGridViewTextBoxColumn
-        '
-        Me.AddressDataGridViewTextBoxColumn.DataPropertyName = "address"
-        Me.AddressDataGridViewTextBoxColumn.HeaderText = "ADDRESS"
-        Me.AddressDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.AddressDataGridViewTextBoxColumn.Name = "AddressDataGridViewTextBoxColumn"
-        '
-        'ImageDataGridViewImageColumn
-        '
-        Me.ImageDataGridViewImageColumn.DataPropertyName = "image"
-        Me.ImageDataGridViewImageColumn.HeaderText = "PROFILE"
-        Me.ImageDataGridViewImageColumn.MinimumWidth = 6
-        Me.ImageDataGridViewImageColumn.Name = "ImageDataGridViewImageColumn"
-        '
-        'manage_student
+        'student_manage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -488,12 +488,13 @@ Partial Class student_manage
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximumSize = New System.Drawing.Size(1459, 980)
         Me.MinimumSize = New System.Drawing.Size(1459, 980)
-        Me.Name = "manage_student"
+        Me.Name = "student_manage"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Manage Student"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.StudentDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StudentDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -66,7 +66,8 @@ Partial Class student_report
         Me.ClientSize = New System.Drawing.Size(1110, 553)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "student_report"
-        Me.Text = "student_report"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Student Report"
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StudentDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

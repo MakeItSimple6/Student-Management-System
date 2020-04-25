@@ -140,25 +140,25 @@ Partial Class Form1
         'AddNewToolStripMenuItem2
         '
         Me.AddNewToolStripMenuItem2.Name = "AddNewToolStripMenuItem2"
-        Me.AddNewToolStripMenuItem2.Size = New System.Drawing.Size(171, 26)
+        Me.AddNewToolStripMenuItem2.Size = New System.Drawing.Size(224, 26)
         Me.AddNewToolStripMenuItem2.Text = "Add New"
         '
         'ViewToolStripMenuItem2
         '
         Me.ViewToolStripMenuItem2.Name = "ViewToolStripMenuItem2"
-        Me.ViewToolStripMenuItem2.Size = New System.Drawing.Size(171, 26)
+        Me.ViewToolStripMenuItem2.Size = New System.Drawing.Size(224, 26)
         Me.ViewToolStripMenuItem2.Text = "View"
         '
         'ManageToolStripMenuItem2
         '
         Me.ManageToolStripMenuItem2.Name = "ManageToolStripMenuItem2"
-        Me.ManageToolStripMenuItem2.Size = New System.Drawing.Size(171, 26)
+        Me.ManageToolStripMenuItem2.Size = New System.Drawing.Size(224, 26)
         Me.ManageToolStripMenuItem2.Text = "Manage"
         '
         'PrintReportToolStripMenuItem2
         '
         Me.PrintReportToolStripMenuItem2.Name = "PrintReportToolStripMenuItem2"
-        Me.PrintReportToolStripMenuItem2.Size = New System.Drawing.Size(171, 26)
+        Me.PrintReportToolStripMenuItem2.Size = New System.Drawing.Size(224, 26)
         Me.PrintReportToolStripMenuItem2.Text = "Print Report"
         '
         'AttendanceToolStripMenuItem
@@ -171,25 +171,25 @@ Partial Class Form1
         'AddToolStripMenuItem
         '
         Me.AddToolStripMenuItem.Name = "AddToolStripMenuItem"
-        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.AddToolStripMenuItem.Size = New System.Drawing.Size(171, 26)
         Me.AddToolStripMenuItem.Text = "Add"
         '
         'ViewToolStripMenuItem3
         '
         Me.ViewToolStripMenuItem3.Name = "ViewToolStripMenuItem3"
-        Me.ViewToolStripMenuItem3.Size = New System.Drawing.Size(224, 26)
+        Me.ViewToolStripMenuItem3.Size = New System.Drawing.Size(171, 26)
         Me.ViewToolStripMenuItem3.Text = "View"
         '
         'ManageToolStripMenuItem3
         '
         Me.ManageToolStripMenuItem3.Name = "ManageToolStripMenuItem3"
-        Me.ManageToolStripMenuItem3.Size = New System.Drawing.Size(224, 26)
+        Me.ManageToolStripMenuItem3.Size = New System.Drawing.Size(171, 26)
         Me.ManageToolStripMenuItem3.Text = "Manage"
         '
         'PrintReportToolStripMenuItem3
         '
         Me.PrintReportToolStripMenuItem3.Name = "PrintReportToolStripMenuItem3"
-        Me.PrintReportToolStripMenuItem3.Size = New System.Drawing.Size(224, 26)
+        Me.PrintReportToolStripMenuItem3.Size = New System.Drawing.Size(171, 26)
         Me.PrintReportToolStripMenuItem3.Text = "Print Report"
         '
         'BorrowedBookToolStripMenuItem

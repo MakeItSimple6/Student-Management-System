@@ -162,13 +162,14 @@ Partial Class student_view
         '
         Me.StudentTableAdapter.ClearBeforeFill = True
         '
-        'view_student
+        'student_view
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1589, 801)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Name = "view_student"
+        Me.Name = "student_view"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Student View"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

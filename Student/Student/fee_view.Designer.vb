@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class attendance_view
+Partial Class fee_view
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -27,19 +27,17 @@ Partial Class attendance_view
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.AttenidDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FeeidDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.StudentidDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.StatusDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TimeinDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TimeoutDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CourseDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.AttendanceBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.StudentDataSet1 = New Student.studentDataSet1()
-        Me.AttendanceTableAdapter = New Student.studentDataSet1TableAdapters.attendanceTableAdapter()
+        Me.DegreeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PriceDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.FeeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.StudentDataSet = New Student.studentDataSet()
+        Me.FeeTableAdapter = New Student.studentDataSetTableAdapters.feeTableAdapter()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AttendanceBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.StudentDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FeeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.StudentDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -56,8 +54,8 @@ Partial Class attendance_view
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeight = 40
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.AttenidDataGridViewTextBoxColumn, Me.StudentidDataGridViewTextBoxColumn, Me.StatusDataGridViewTextBoxColumn, Me.DateDataGridViewTextBoxColumn, Me.TimeinDataGridViewTextBoxColumn, Me.TimeoutDataGridViewTextBoxColumn, Me.CourseDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.AttendanceBindingSource
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.FeeidDataGridViewTextBoxColumn, Me.StudentidDataGridViewTextBoxColumn, Me.CourseDataGridViewTextBoxColumn, Me.DegreeDataGridViewTextBoxColumn, Me.PriceDataGridViewTextBoxColumn})
+        Me.DataGridView1.DataSource = Me.FeeBindingSource
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Tahoma", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -81,15 +79,15 @@ Partial Class attendance_view
         Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 170
-        Me.DataGridView1.Size = New System.Drawing.Size(1522, 627)
-        Me.DataGridView1.TabIndex = 1
+        Me.DataGridView1.Size = New System.Drawing.Size(1008, 600)
+        Me.DataGridView1.TabIndex = 2
         '
-        'AttenidDataGridViewTextBoxColumn
+        'FeeidDataGridViewTextBoxColumn
         '
-        Me.AttenidDataGridViewTextBoxColumn.DataPropertyName = "atten_id"
-        Me.AttenidDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.AttenidDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.AttenidDataGridViewTextBoxColumn.Name = "AttenidDataGridViewTextBoxColumn"
+        Me.FeeidDataGridViewTextBoxColumn.DataPropertyName = "fee_id"
+        Me.FeeidDataGridViewTextBoxColumn.HeaderText = "ID"
+        Me.FeeidDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.FeeidDataGridViewTextBoxColumn.Name = "FeeidDataGridViewTextBoxColumn"
         '
         'StudentidDataGridViewTextBoxColumn
         '
@@ -98,34 +96,6 @@ Partial Class attendance_view
         Me.StudentidDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.StudentidDataGridViewTextBoxColumn.Name = "StudentidDataGridViewTextBoxColumn"
         '
-        'StatusDataGridViewTextBoxColumn
-        '
-        Me.StatusDataGridViewTextBoxColumn.DataPropertyName = "status"
-        Me.StatusDataGridViewTextBoxColumn.HeaderText = "STATUS"
-        Me.StatusDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.StatusDataGridViewTextBoxColumn.Name = "StatusDataGridViewTextBoxColumn"
-        '
-        'DateDataGridViewTextBoxColumn
-        '
-        Me.DateDataGridViewTextBoxColumn.DataPropertyName = "date_"
-        Me.DateDataGridViewTextBoxColumn.HeaderText = "DATE"
-        Me.DateDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.DateDataGridViewTextBoxColumn.Name = "DateDataGridViewTextBoxColumn"
-        '
-        'TimeinDataGridViewTextBoxColumn
-        '
-        Me.TimeinDataGridViewTextBoxColumn.DataPropertyName = "time_in"
-        Me.TimeinDataGridViewTextBoxColumn.HeaderText = "TIME IN"
-        Me.TimeinDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.TimeinDataGridViewTextBoxColumn.Name = "TimeinDataGridViewTextBoxColumn"
-        '
-        'TimeoutDataGridViewTextBoxColumn
-        '
-        Me.TimeoutDataGridViewTextBoxColumn.DataPropertyName = "time_out"
-        Me.TimeoutDataGridViewTextBoxColumn.HeaderText = "TIME OUT"
-        Me.TimeoutDataGridViewTextBoxColumn.MinimumWidth = 6
-        Me.TimeoutDataGridViewTextBoxColumn.Name = "TimeoutDataGridViewTextBoxColumn"
-        '
         'CourseDataGridViewTextBoxColumn
         '
         Me.CourseDataGridViewTextBoxColumn.DataPropertyName = "course"
@@ -133,45 +103,57 @@ Partial Class attendance_view
         Me.CourseDataGridViewTextBoxColumn.MinimumWidth = 6
         Me.CourseDataGridViewTextBoxColumn.Name = "CourseDataGridViewTextBoxColumn"
         '
-        'AttendanceBindingSource
+        'DegreeDataGridViewTextBoxColumn
         '
-        Me.AttendanceBindingSource.DataMember = "attendance"
-        Me.AttendanceBindingSource.DataSource = Me.StudentDataSet1
+        Me.DegreeDataGridViewTextBoxColumn.DataPropertyName = "degree"
+        Me.DegreeDataGridViewTextBoxColumn.HeaderText = "DEGREE"
+        Me.DegreeDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.DegreeDataGridViewTextBoxColumn.Name = "DegreeDataGridViewTextBoxColumn"
         '
-        'StudentDataSet1
+        'PriceDataGridViewTextBoxColumn
         '
-        Me.StudentDataSet1.DataSetName = "studentDataSet1"
-        Me.StudentDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.PriceDataGridViewTextBoxColumn.DataPropertyName = "price"
+        Me.PriceDataGridViewTextBoxColumn.HeaderText = "PRICE"
+        Me.PriceDataGridViewTextBoxColumn.MinimumWidth = 6
+        Me.PriceDataGridViewTextBoxColumn.Name = "PriceDataGridViewTextBoxColumn"
         '
-        'AttendanceTableAdapter
+        'FeeBindingSource
         '
-        Me.AttendanceTableAdapter.ClearBeforeFill = True
+        Me.FeeBindingSource.DataMember = "fee"
+        Me.FeeBindingSource.DataSource = Me.StudentDataSet
         '
-        'attendance_view
+        'StudentDataSet
+        '
+        Me.StudentDataSet.DataSetName = "studentDataSet"
+        Me.StudentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'FeeTableAdapter
+        '
+        Me.FeeTableAdapter.ClearBeforeFill = True
+        '
+        'fee_view
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1522, 627)
+        Me.ClientSize = New System.Drawing.Size(1008, 600)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Name = "attendance_view"
+        Me.Name = "fee_view"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Attendance View"
+        Me.Text = "Fee View"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AttendanceBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.StudentDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FeeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StudentDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents StudentDataSet1 As studentDataSet1
-    Friend WithEvents AttendanceBindingSource As BindingSource
-    Friend WithEvents AttendanceTableAdapter As studentDataSet1TableAdapters.attendanceTableAdapter
-    Friend WithEvents AttenidDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents StudentDataSet As studentDataSet
+    Friend WithEvents FeeBindingSource As BindingSource
+    Friend WithEvents FeeTableAdapter As studentDataSetTableAdapters.feeTableAdapter
+    Friend WithEvents FeeidDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents StudentidDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents StatusDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents DateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TimeinDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TimeoutDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents CourseDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DegreeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents PriceDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

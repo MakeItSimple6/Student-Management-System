@@ -101,6 +101,35 @@
     <Compile Include="attendance_report.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="fee_add.Designer.vb">
+      <DependentUpon>fee_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fee_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fee_manage.Designer.vb">
+      <DependentUpon>fee_manage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fee_manage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fee_report.Designer.vb">
+      <DependentUpon>fee_report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fee_report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fee_view.Designer.vb">
+      <DependentUpon>fee_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="fee_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="studentDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>studentDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="student_add.Designer.vb">
       <DependentUpon>student_add.vb</DependentUpon>
     </Compile>
@@ -173,6 +202,19 @@
       <DependentUpon>attendance_report.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="attendance_report.rdlc" />
+    <EmbeddedResource Include="fee_add.resx">
+      <DependentUpon>fee_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fee_manage.resx">
+      <DependentUpon>fee_manage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fee_report.rdlc" />
+    <EmbeddedResource Include="fee_report.resx">
+      <DependentUpon>fee_report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fee_view.resx">
+      <DependentUpon>fee_view.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="student_add.resx">
       <DependentUpon>student_add.vb</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +256,17 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="studentDataSet.xsc">
+      <DependentUpon>studentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="studentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>studentDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="studentDataSet.xss">
+      <DependentUpon>studentDataSet.xsd</DependentUpon>
+    </None>
     <None Include="studentDataSet1.xsc">
       <DependentUpon>studentDataSet1.xsd</DependentUpon>
     </None>
