@@ -22,6 +22,11 @@ Student
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:Student.My.Resources.Resources.refresh">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="T:Student.studentDataSet">
 <summary>
 Represents a strongly typed in-memory cache of data.

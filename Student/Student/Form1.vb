@@ -18,4 +18,9 @@
         'Student Report'
         student_report.Show()
     End Sub
+
+    Private Sub AddToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddToolStripMenuItem.Click
+        'add Attendace 
+        attendance_add.Show()
+    End Sub
 End Class

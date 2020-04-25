@@ -75,3 +75,4 @@ C:\Users\Kamar\Desktop\Student Management System\Student\Student\bin\Debug\zh-CH
 C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\RdlCompile.cache
 C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\RdlCompile.compiled
 C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Student.student_report.resources
+C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Student.attendance_add.resources
