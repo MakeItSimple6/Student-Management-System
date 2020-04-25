@@ -30,13 +30,13 @@ Public Class manage_student
     Dim Imagepath As String
     Private Sub manage_student_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Form Load'
+        Me.StudentTableAdapter.Fill(Me.StudentDataSet1.student)
 
-        'This one is add new to DataGridView show that the image now will be visible to full size'
-        DirectCast(DataGridView1.Columns(6), DataGridViewImageColumn).ImageLayout = DataGridViewImageCellLayout.Stretch
+        DirectCast(DataGridView1.Columns(7), DataGridViewImageColumn).ImageLayout = DataGridViewImageCellLayout.Stretch
         DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
 
         Try
-            Me.StudentTableAdapter.Fill(Me.StudentDataSet.student)
+
 
             For i As Integer = 0 To DataGridView1.RowCount - 1
                 If i Mod 2 = 0 Then
@@ -59,12 +59,12 @@ Public Class manage_student
                     If .Rows(index).Cells(1).Value = TextBox5.Text Then
                         TextBox1.Text = .Rows(index).Cells(0).Value
                         TextBox2.Text = .Rows(index).Cells(1).Value
-                        DateTimePicker1.Value = .Rows(index).Cells(2).Value
-                        ComboBox1.Text = .Rows(index).Cells(3).Value
-                        TextBox3.Text = .Rows(index).Cells(4).Value
-                        TextBox4.Text = .Rows(index).Cells(5).Value
-
-                        img = .Rows(index).Cells(6).Value
+                        TextBox6.Text = .Rows(index).Cells(2).Value
+                        DateTimePicker1.Value = .Rows(index).Cells(3).Value
+                        ComboBox1.Text = .Rows(index).Cells(4).Value
+                        TextBox3.Text = .Rows(index).Cells(5).Value
+                        TextBox4.Text = .Rows(index).Cells(6).Value
+                        img = .Rows(index).Cells(7).Value
 
                         Dim ms As New MemoryStream(img)
                         PictureBox1.Image = Image.FromStream(ms)
@@ -87,12 +87,12 @@ Public Class manage_student
                     Index = .CurrentRow.Index
                     TextBox1.Text = .Rows(Index).Cells(0).Value
                     TextBox2.Text = .Rows(Index).Cells(1).Value
-                    DateTimePicker1.Value = .Rows(Index).Cells(2).Value
-                    ComboBox1.Text = .Rows(Index).Cells(3).Value
-                    TextBox3.Text = .Rows(Index).Cells(4).Value
-                    TextBox4.Text = .Rows(Index).Cells(5).Value
-
-                    img = .Rows(Index).Cells(6).Value
+                    TextBox6.Text = .Rows(Index).Cells(2).Value
+                    DateTimePicker1.Value = .Rows(Index).Cells(3).Value
+                    ComboBox1.Text = .Rows(Index).Cells(4).Value
+                    TextBox3.Text = .Rows(Index).Cells(5).Value
+                    TextBox4.Text = .Rows(Index).Cells(6).Value
+                    img = .Rows(Index).Cells(7).Value
 
                     Dim ms As New MemoryStream(img)
                     PictureBox1.Image = Image.FromStream(ms)
@@ -163,7 +163,7 @@ Public Class manage_student
                     MsgBox("Updated Successfully!")
 
                     'Refreshing DataGridView After Deleting each student'
-                    Me.StudentTableAdapter.Fill(Me.StudentDataSet.student)
+                    Me.StudentTableAdapter.Fill(Me.StudentDataSet1.student)
                 End With
             End With
         Catch ex As Exception
@@ -186,7 +186,7 @@ Public Class manage_student
                     MsgBox("Deleted Successfully!")
 
                     'Refreshing DataGridView After Deleting each student'
-                    Me.StudentTableAdapter.Fill(Me.StudentDataSet.student)
+                    Me.StudentTableAdapter.Fill(Me.StudentDataSet1.student)
                 End With
             End With
         Catch ex As Exception

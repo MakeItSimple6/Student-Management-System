@@ -8,7 +8,7 @@
             <TablixCornerRow>
               <TablixCornerCell>
                 <CellContents>
-                  <Textbox Name="Textbox19">
+                  <Textbox Name="Textbox11">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
@@ -22,7 +22,7 @@
                         <Style />
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>Textbox19</rd:DefaultName>
+                    <rd:DefaultName>Textbox11</rd:DefaultName>
                     <Style>
                       <Border>
                         <Color>LightGrey</Color>
@@ -38,7 +38,7 @@
               </TablixCornerCell>
               <TablixCornerCell>
                 <CellContents>
-                  <Textbox Name="Textbox30">
+                  <Textbox Name="Textbox12">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
@@ -52,7 +52,7 @@
                         <Style />
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>Textbox30</rd:DefaultName>
+                    <rd:DefaultName>Textbox12</rd:DefaultName>
                     <Style>
                       <Border>
                         <Color>LightGrey</Color>
@@ -68,7 +68,37 @@
               </TablixCornerCell>
               <TablixCornerCell>
                 <CellContents>
-                  <Textbox Name="Textbox28">
+                  <Textbox Name="Textbox16">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>course</Value>
+                            <Style />
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Textbox16</rd:DefaultName>
+                    <Style>
+                      <Border>
+                        <Color>LightGrey</Color>
+                        <Style>Solid</Style>
+                      </Border>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                </CellContents>
+              </TablixCornerCell>
+              <TablixCornerCell>
+                <CellContents>
+                  <Textbox Name="Textbox14">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
@@ -82,7 +112,7 @@
                         <Style />
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>Textbox28</rd:DefaultName>
+                    <rd:DefaultName>Textbox14</rd:DefaultName>
                     <Style>
                       <Border>
                         <Color>LightGrey</Color>
@@ -98,7 +128,7 @@
               </TablixCornerCell>
               <TablixCornerCell>
                 <CellContents>
-                  <Textbox Name="Textbox26">
+                  <Textbox Name="Textbox22">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
@@ -112,7 +142,7 @@
                         <Style />
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>Textbox26</rd:DefaultName>
+                    <rd:DefaultName>Textbox22</rd:DefaultName>
                     <Style>
                       <Border>
                         <Color>LightGrey</Color>
@@ -128,7 +158,7 @@
               </TablixCornerCell>
               <TablixCornerCell>
                 <CellContents>
-                  <Textbox Name="Textbox24">
+                  <Textbox Name="Textbox18">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
@@ -142,7 +172,7 @@
                         <Style />
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>Textbox24</rd:DefaultName>
+                    <rd:DefaultName>Textbox18</rd:DefaultName>
                     <Style>
                       <Border>
                         <Color>LightGrey</Color>
@@ -162,12 +192,12 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>5.21992cm</Width>
+              <Width>5.50567cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>2.36742cm</Height>
+              <Height>0.6cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -182,9 +212,7 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Left</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>address1</rd:DefaultName>
@@ -214,23 +242,23 @@
                 </GroupExpressions>
               </Group>
               <TablixHeader>
-                <Size>2.36742cm</Size>
+                <Size>0.6cm</Size>
                 <CellContents>
-                  <Textbox Name="Textbox17">
+                  <Textbox Name="Textbox9">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>ADDRESS</Value>
+                            <Value>address</Value>
                             <Style />
                           </TextRun>
                         </TextRuns>
                         <Style />
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>Textbox17</rd:DefaultName>
+                    <rd:DefaultName>Textbox9</rd:DefaultName>
                     <Style>
                       <Border>
                         <Color>LightGrey</Color>
@@ -261,7 +289,7 @@
                 </SortExpression>
               </SortExpressions>
               <TablixHeader>
-                <Size>2.04492cm</Size>
+                <Size>1.58983cm</Size>
                 <CellContents>
                   <Textbox Name="ID">
                     <CanGrow>true</CanGrow>
@@ -274,9 +302,7 @@
                             <Style />
                           </TextRun>
                         </TextRuns>
-                        <Style>
-                          <TextAlign>Left</TextAlign>
-                        </Style>
+                        <Style />
                       </Paragraph>
                     </Paragraphs>
                     <rd:DefaultName>ID</rd:DefaultName>
@@ -296,9 +322,9 @@
               <TablixMembers>
                 <TablixMember>
                   <TablixHeader>
-                    <Size>3.98167cm</Size>
+                    <Size>3.41017cm</Size>
                     <CellContents>
-                      <Textbox Name="student_name1">
+                      <Textbox Name="student_name">
                         <CanGrow>true</CanGrow>
                         <KeepTogether>true</KeepTogether>
                         <Paragraphs>
@@ -309,12 +335,10 @@
                                 <Style />
                               </TextRun>
                             </TextRuns>
-                            <Style>
-                              <TextAlign>Left</TextAlign>
-                            </Style>
+                            <Style />
                           </Paragraph>
                         </Paragraphs>
-                        <rd:DefaultName>student_name1</rd:DefaultName>
+                        <rd:DefaultName>student_name</rd:DefaultName>
                         <Style>
                           <Border>
                             <Color>LightGrey</Color>
@@ -331,25 +355,23 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>4.57433cm</Size>
+                        <Size>4.48967cm</Size>
                         <CellContents>
-                          <Textbox Name="dob1">
+                          <Textbox Name="course">
                             <CanGrow>true</CanGrow>
                             <KeepTogether>true</KeepTogether>
                             <Paragraphs>
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>=Fields!dob.Value</Value>
+                                    <Value>=Fields!course.Value</Value>
                                     <Style />
                                   </TextRun>
                                 </TextRuns>
-                                <Style>
-                                  <TextAlign>Left</TextAlign>
-                                </Style>
+                                <Style />
                               </Paragraph>
                             </Paragraphs>
-                            <rd:DefaultName>dob1</rd:DefaultName>
+                            <rd:DefaultName>course</rd:DefaultName>
                             <Style>
                               <Border>
                                 <Color>LightGrey</Color>
@@ -366,25 +388,23 @@
                       <TablixMembers>
                         <TablixMember>
                           <TablixHeader>
-                            <Size>2.754cm</Size>
+                            <Size>2.8175cm</Size>
                             <CellContents>
-                              <Textbox Name="gender1">
+                              <Textbox Name="dob">
                                 <CanGrow>true</CanGrow>
                                 <KeepTogether>true</KeepTogether>
                                 <Paragraphs>
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>=Fields!gender.Value</Value>
+                                        <Value>=Fields!dob.Value</Value>
                                         <Style />
                                       </TextRun>
                                     </TextRuns>
-                                    <Style>
-                                      <TextAlign>Left</TextAlign>
-                                    </Style>
+                                    <Style />
                                   </Paragraph>
                                 </Paragraphs>
-                                <rd:DefaultName>gender1</rd:DefaultName>
+                                <rd:DefaultName>dob</rd:DefaultName>
                                 <Style>
                                   <Border>
                                     <Color>LightGrey</Color>
@@ -401,25 +421,23 @@
                           <TablixMembers>
                             <TablixMember>
                               <TablixHeader>
-                                <Size>3.17733cm</Size>
+                                <Size>2.9445cm</Size>
                                 <CellContents>
-                                  <Textbox Name="phone_no1">
+                                  <Textbox Name="gender">
                                     <CanGrow>true</CanGrow>
                                     <KeepTogether>true</KeepTogether>
                                     <Paragraphs>
                                       <Paragraph>
                                         <TextRuns>
                                           <TextRun>
-                                            <Value>=Fields!phone_no.Value</Value>
+                                            <Value>=Fields!gender.Value</Value>
                                             <Style />
                                           </TextRun>
                                         </TextRuns>
-                                        <Style>
-                                          <TextAlign>Left</TextAlign>
-                                        </Style>
+                                        <Style />
                                       </Paragraph>
                                     </Paragraphs>
-                                    <rd:DefaultName>phone_no1</rd:DefaultName>
+                                    <rd:DefaultName>gender</rd:DefaultName>
                                     <Style>
                                       <Border>
                                         <Color>LightGrey</Color>
@@ -433,6 +451,44 @@
                                   </Textbox>
                                 </CellContents>
                               </TablixHeader>
+                              <TablixMembers>
+                                <TablixMember>
+                                  <TablixHeader>
+                                    <Size>3.86797cm</Size>
+                                    <CellContents>
+                                      <Textbox Name="phone_no">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value>=Fields!phone_no.Value</Value>
+                                                <Style />
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>phone_no</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Color>LightGrey</Color>
+                                            <Style>Solid</Style>
+                                          </Border>
+                                          <PaddingLeft>2pt</PaddingLeft>
+                                          <PaddingRight>2pt</PaddingRight>
+                                          <PaddingTop>2pt</PaddingTop>
+                                          <PaddingBottom>2pt</PaddingBottom>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixHeader>
+                                  <TablixMembers>
+                                    <TablixMember />
+                                  </TablixMembers>
+                                </TablixMember>
+                              </TablixMembers>
                             </TablixMember>
                           </TablixMembers>
                         </TablixMember>
@@ -444,11 +500,10 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>student</DataSetName>
-        <Top>3.1877cm</Top>
-        <Left>1.0655cm</Left>
-        <Height>4.73483cm</Height>
-        <Width>21.75217cm</Width>
+        <DataSetName>DataSet1</DataSetName>
+        <Top>1.83303cm</Top>
+        <Height>1.2cm</Height>
+        <Width>24.6253cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -459,7 +514,7 @@
     <Height>4.475in</Height>
     <Style />
   </Body>
-  <Width>9.79167in</Width>
+  <Width>11.05092in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -479,11 +534,18 @@
       </ConnectionProperties>
       <rd:DataSourceID>f76d0f7c-05b4-4e59-b39a-31b801d31d97</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="studentDataSet1">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>27c31662-feb7-4f4e-9e21-d54a406f4f9c</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="student">
+    <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>studentDataSet</DataSourceName>
+        <DataSourceName>studentDataSet1</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -493,6 +555,10 @@
         </Field>
         <Field Name="student_name">
           <DataField>student_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="course">
+          <DataField>course</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="dob">
@@ -517,8 +583,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>studentDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Kamar\Desktop\Student Management System\Student\Student\studentDataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>studentDataSet1</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Kamar\Desktop\Student Management System\Student\Student\studentDataSet1.xsd</rd:SchemaPath>
         <rd:TableName>student</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

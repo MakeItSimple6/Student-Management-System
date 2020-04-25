@@ -27,67 +27,107 @@ Student
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
-<member name="T:Student.studentDataSet">
+<member name="T:Student.studentDataSet1">
 <summary>
 Represents a strongly typed in-memory cache of data.
 </summary>
 </member>
-<member name="T:Student.studentDataSet.studentDataTable">
+<member name="T:Student.studentDataSet1.attendanceDataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:Student.studentDataSet.studentRow">
+<member name="T:Student.studentDataSet1.courseDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet1.studentDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet1.attendanceRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:Student.studentDataSet.studentRowChangeEvent">
+<member name="T:Student.studentDataSet1.courseRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet1.studentRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet1.attendanceRowChangeEvent">
 <summary>
 Row event argument class
 </summary>
 </member>
-<member name="T:Student.studentDataSetTableAdapters.studentTableAdapter">
+<member name="T:Student.studentDataSet1.courseRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Student.studentDataSet1.studentRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Student.studentDataSet1TableAdapters.attendanceTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:Student.studentDataSetTableAdapters.TableAdapterManager">
+<member name="T:Student.studentDataSet1TableAdapters.courseTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet1TableAdapters.studentTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet1TableAdapters.TableAdapterManager">
 <summary>
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
 </summary>
 </member>
-<member name="M:Student.studentDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Student.studentDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<member name="M:Student.studentDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(Student.studentDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
 <summary>
 Update rows in top-down order.
 </summary>
 </member>
-<member name="M:Student.studentDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Student.studentDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<member name="M:Student.studentDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(Student.studentDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
 <summary>
 Insert rows in top-down order.
 </summary>
 </member>
-<member name="M:Student.studentDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Student.studentDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<member name="M:Student.studentDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(Student.studentDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
 <summary>
 Delete rows in bottom-up order.
 </summary>
 </member>
-<member name="M:Student.studentDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<member name="M:Student.studentDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
 <summary>
 Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
 </summary>
 </member>
-<member name="M:Student.studentDataSetTableAdapters.TableAdapterManager.UpdateAll(Student.studentDataSet)">
+<member name="M:Student.studentDataSet1TableAdapters.TableAdapterManager.UpdateAll(Student.studentDataSet1)">
 <summary>
 Update all changes to the dataset.
 </summary>
 </member>
-<member name="T:Student.studentDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<member name="T:Student.studentDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
 <summary>
 Update Order Option
 </summary>
 </member>
-<member name="T:Student.studentDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<member name="T:Student.studentDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
 <summary>
 Used to sort self-referenced table's rows
 </summary>

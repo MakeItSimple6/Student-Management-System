@@ -69,12 +69,13 @@ Public Class add_student
 
                 With command
                     .Connection = con
-                    .CommandText = "Insert into student([ID],[student_name],[dob],[gender],[phone_no],[address],[image])
-                                    Values(@id,@name,@dob,@gender,@phone,@address,@image)"
+                    .CommandText = "Insert into student([ID],[student_name],[course],[dob],[gender],[phone_no],[address],[image])
+                                    Values(@id,@name,@course,@dob,@gender,@phone,@address,@image)"
                 End With
 
                 command.Parameters.AddWithValue("@id", TextBox1.Text)
                 command.Parameters.AddWithValue("@name", TextBox2.Text)
+                command.Parameters.AddWithValue("@course", ComboBox2.Text)
                 command.Parameters.AddWithValue("@dob", DateTimePicker1.Value.Date)
                 command.Parameters.AddWithValue("@gender", ComboBox1.Text)
                 command.Parameters.AddWithValue("@phone", TextBox3.Text)
@@ -90,5 +91,28 @@ Public Class add_student
             'Added MessageBox.icon as Error'
             MsgBox("Error : " + ex.Message.ToString(), MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub add_student_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Student Form Load
+        With con
+            .ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Kamar\Desktop\Student Management System\student.accdb"
+            .Open()
+
+            With command
+                .Connection = con
+                'Finding the Course for particular student
+                Label7.Text = ""
+                .CommandText = "Select [course] from student"
+                Dim reader_course = .ExecuteReader
+                While reader_course.Read
+                    ComboBox2.Items.Add(reader_course("course"))
+                End While
+                reader_course.Close()
+
+            End With
+            .Close()
+            command.Dispose()
+        End With
     End Sub
 End Class

@@ -43,6 +43,8 @@ Partial Class add_student
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -105,7 +107,7 @@ Partial Class add_student
         '
         Me.Label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label6.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(84, 411)
+        Me.Label6.Location = New System.Drawing.Point(84, 503)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(157, 43)
         Me.Label6.TabIndex = 5
@@ -162,7 +164,7 @@ Partial Class add_student
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(261, 411)
+        Me.TextBox4.Location = New System.Drawing.Point(261, 503)
         Me.TextBox4.Multiline = True
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(282, 222)
@@ -172,7 +174,7 @@ Partial Class add_student
         '
         Me.PictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(616, 165)
+        Me.PictureBox1.Location = New System.Drawing.Point(615, 148)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(229, 213)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -183,7 +185,7 @@ Partial Class add_student
         '
         Me.Label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label7.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(611, 98)
+        Me.Label7.Location = New System.Drawing.Point(611, 89)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(234, 43)
         Me.Label7.TabIndex = 13
@@ -233,7 +235,7 @@ Partial Class add_student
         Me.Button3.FlatAppearance.BorderSize = 0
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(429, 671)
+        Me.Button3.Location = New System.Drawing.Point(429, 782)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(114, 33)
         Me.Button3.TabIndex = 17
@@ -246,7 +248,7 @@ Partial Class add_student
         Me.Button4.FlatAppearance.BorderSize = 0
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(295, 671)
+        Me.Button4.Location = New System.Drawing.Point(295, 782)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(114, 33)
         Me.Button4.TabIndex = 18
@@ -259,7 +261,7 @@ Partial Class add_student
         Me.Button5.FlatAppearance.BorderSize = 0
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(164, 671)
+        Me.Button5.Location = New System.Drawing.Point(164, 782)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(114, 33)
         Me.Button5.TabIndex = 19
@@ -270,12 +272,34 @@ Partial Class add_student
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'Label9
+        '
+        Me.Label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label9.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(84, 419)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(157, 43)
+        Me.Label9.TabIndex = 20
+        Me.Label9.Text = "Course :"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(261, 419)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(282, 32)
+        Me.ComboBox2.TabIndex = 21
+        '
         'add_student
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.MistyRose
-        Me.ClientSize = New System.Drawing.Size(949, 744)
+        Me.ClientSize = New System.Drawing.Size(961, 838)
+        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
@@ -298,7 +322,7 @@ Partial Class add_student
         Me.Controls.Add(Me.Label1)
         Me.Name = "add_student"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "add_student"
+        Me.Text = "Student Add Form"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -326,4 +350,6 @@ Partial Class add_student
     Friend WithEvents Button4 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents Label9 As Label
+    Friend WithEvents ComboBox2 As ComboBox
 End Class

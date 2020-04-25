@@ -25,16 +25,16 @@ Partial Class student_report
         Me.components = New System.ComponentModel.Container()
         Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.StudentTableAdapter = New Student.studentDataSetTableAdapters.studentTableAdapter()
-        Me.StudentDataSet = New Student.studentDataSet()
+        Me.StudentDataSet1 = New Student.studentDataSet1()
         Me.StudentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        CType(Me.StudentDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.StudentTableAdapter = New Student.studentDataSet1TableAdapters.studentTableAdapter()
+        CType(Me.StudentDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ReportViewer1
         '
-        ReportDataSource1.Name = "student"
+        ReportDataSource1.Name = "DataSet1"
         ReportDataSource1.Value = Me.StudentBindingSource
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Student.Report1.rdlc"
@@ -44,19 +44,19 @@ Partial Class student_report
         Me.ReportViewer1.Size = New System.Drawing.Size(1106, 553)
         Me.ReportViewer1.TabIndex = 3
         '
-        'StudentTableAdapter
+        'StudentDataSet1
         '
-        Me.StudentTableAdapter.ClearBeforeFill = True
-        '
-        'StudentDataSet
-        '
-        Me.StudentDataSet.DataSetName = "studentDataSet"
-        Me.StudentDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        Me.StudentDataSet1.DataSetName = "studentDataSet1"
+        Me.StudentDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'StudentBindingSource
         '
         Me.StudentBindingSource.DataMember = "student"
-        Me.StudentBindingSource.DataSource = Me.StudentDataSet
+        Me.StudentBindingSource.DataSource = Me.StudentDataSet1
+        '
+        'StudentTableAdapter
+        '
+        Me.StudentTableAdapter.ClearBeforeFill = True
         '
         'student_report
         '
@@ -66,14 +66,14 @@ Partial Class student_report
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "student_report"
         Me.Text = "student_report"
-        CType(Me.StudentDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.StudentDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.StudentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
-    Friend WithEvents StudentTableAdapter As studentDataSetTableAdapters.studentTableAdapter
+    Friend WithEvents StudentDataSet1 As studentDataSet1
     Friend WithEvents StudentBindingSource As BindingSource
-    Friend WithEvents StudentDataSet As studentDataSet
+    Friend WithEvents StudentTableAdapter As studentDataSet1TableAdapters.studentTableAdapter
 End Class
