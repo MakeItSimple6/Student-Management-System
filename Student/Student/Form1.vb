@@ -35,7 +35,6 @@
         'Fee add
         fee_add.Show()
     End Sub
-
     Private Sub ViewToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem2.Click
         'Fee View
         fee_view.Show()
@@ -47,5 +46,21 @@
     Private Sub PrintReportToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles PrintReportToolStripMenuItem2.Click
         'Fee Report
         fee_report.Show()
+    End Sub
+    Private Sub AddToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AddToolStripMenuItem1.Click
+        'Borrowed Book Add
+        borrow_add.Show()
+    End Sub
+    Private Sub ViewToolStripMenuItem4_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem4.Click
+        'Borrowed Book View
+        borrow_view.Show()
+    End Sub
+    Private Sub ManageToolStripMenuItem4_Click(sender As Object, e As EventArgs) Handles ManageToolStripMenuItem4.Click
+        'Borrowed Book Manage
+        borrow_manage.Show()
+    End Sub
+    Private Sub PrintReportToolStripMenuItem4_Click(sender As Object, e As EventArgs) Handles PrintReportToolStripMenuItem4.Click
+        'Borrowed Book Report
+        borrow_report.Show()
     End Sub
 End Class

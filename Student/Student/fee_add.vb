@@ -12,7 +12,6 @@ Public Class fee_add
             With con
                 .ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Kamar\Desktop\Student Management System\student.accdb"
                 .Open()
-
                 With command
                     .Connection = con
                     .CommandText = "Select [id] from student"
@@ -22,12 +21,12 @@ Public Class fee_add
                     End While
                     reader1.Close()
                 End With
-
-                .Close()
                 command.Dispose()
             End With
         Catch ex As Exception
             MsgBox("Error : " + ex.Message.ToString(), MessageBoxIcon.Error)
+        Finally
+            con.Close()
         End Try
     End Sub
     Private Sub course_name(sender As Object, e As EventArgs) Handles ComboBox1.SelectedValueChanged

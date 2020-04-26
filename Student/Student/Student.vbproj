@@ -101,6 +101,30 @@
     <Compile Include="attendance_report.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="borrow_add.Designer.vb">
+      <DependentUpon>borrow_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="borrow_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="borrow_manage.Designer.vb">
+      <DependentUpon>borrow_manage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="borrow_manage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="borrow_report.Designer.vb">
+      <DependentUpon>borrow_report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="borrow_report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="borrow_view.Designer.vb">
+      <DependentUpon>borrow_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="borrow_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="fee_add.Designer.vb">
       <DependentUpon>fee_add.vb</DependentUpon>
     </Compile>
@@ -129,6 +153,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>studentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="studentDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>studentDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="student_add.Designer.vb">
       <DependentUpon>student_add.vb</DependentUpon>
@@ -202,6 +231,19 @@
       <DependentUpon>attendance_report.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="attendance_report.rdlc" />
+    <EmbeddedResource Include="borrow_add.resx">
+      <DependentUpon>borrow_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="borrow_manage.resx">
+      <DependentUpon>borrow_manage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="borrow_report.rdlc" />
+    <EmbeddedResource Include="borrow_report.resx">
+      <DependentUpon>borrow_report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="borrow_view.resx">
+      <DependentUpon>borrow_view.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fee_add.resx">
       <DependentUpon>fee_add.vb</DependentUpon>
     </EmbeddedResource>
@@ -277,6 +319,17 @@
     </None>
     <None Include="studentDataSet1.xss">
       <DependentUpon>studentDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="studentDataSet2.xsc">
+      <DependentUpon>studentDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="studentDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>studentDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="studentDataSet2.xss">
+      <DependentUpon>studentDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

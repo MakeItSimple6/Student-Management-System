@@ -38,11 +38,12 @@ Partial Class fee_add
         '
         'Label8
         '
+        Me.Label8.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Label8.Font = New System.Drawing.Font("Tahoma", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(0, 23)
+        Me.Label8.Location = New System.Drawing.Point(0, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(484, 43)
+        Me.Label8.Size = New System.Drawing.Size(475, 66)
         Me.Label8.TabIndex = 49
         Me.Label8.Text = "Fee Add Form"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter

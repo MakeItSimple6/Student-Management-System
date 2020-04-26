@@ -59,7 +59,7 @@ Partial Class attendance_add
         Me.DateTimePicker1.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Location = New System.Drawing.Point(193, 197)
         Me.DateTimePicker1.MaxDate = New Date(2021, 12, 31, 0, 0, 0, 0)
-        Me.DateTimePicker1.MinDate = New Date(2018, 6, 1, 0, 0, 0, 0)
+        Me.DateTimePicker1.MinDate = New Date(2018, 1, 1, 0, 0, 0, 0)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(282, 32)
         Me.DateTimePicker1.TabIndex = 20
