@@ -125,6 +125,12 @@
     <Compile Include="borrow_view.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="deposit.Designer.vb">
+      <DependentUpon>deposit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="deposit.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="fee_add.Designer.vb">
       <DependentUpon>fee_add.vb</DependentUpon>
     </Compile>
@@ -149,6 +155,36 @@
     <Compile Include="fee_view.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="history.Designer.vb">
+      <DependentUpon>history.vb</DependentUpon>
+    </Compile>
+    <Compile Include="history.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="member_add.Designer.vb">
+      <DependentUpon>member_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="member_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="member_manage.Designer.vb">
+      <DependentUpon>member_manage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="member_manage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="member_report.Designer.vb">
+      <DependentUpon>member_report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="member_report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="member_view.Designer.vb">
+      <DependentUpon>member_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="member_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="studentDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -158,6 +194,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>studentDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="studentDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>studentDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="studentDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>studentDataSet4.xsd</DependentUpon>
     </Compile>
     <Compile Include="student_add.Designer.vb">
       <DependentUpon>student_add.vb</DependentUpon>
@@ -244,6 +290,9 @@
     <EmbeddedResource Include="borrow_view.resx">
       <DependentUpon>borrow_view.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="deposit.resx">
+      <DependentUpon>deposit.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fee_add.resx">
       <DependentUpon>fee_add.vb</DependentUpon>
     </EmbeddedResource>
@@ -256,6 +305,22 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fee_view.resx">
       <DependentUpon>fee_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="history.resx">
+      <DependentUpon>history.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="member_add.resx">
+      <DependentUpon>member_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="member_manage.resx">
+      <DependentUpon>member_manage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="member_report.rdlc" />
+    <EmbeddedResource Include="member_report.resx">
+      <DependentUpon>member_report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="member_view.resx">
+      <DependentUpon>member_view.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="student_add.resx">
       <DependentUpon>student_add.vb</DependentUpon>
@@ -330,6 +395,28 @@
     </None>
     <None Include="studentDataSet2.xss">
       <DependentUpon>studentDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="studentDataSet3.xsc">
+      <DependentUpon>studentDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="studentDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>studentDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="studentDataSet3.xss">
+      <DependentUpon>studentDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="studentDataSet4.xsc">
+      <DependentUpon>studentDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="studentDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>studentDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="studentDataSet4.xss">
+      <DependentUpon>studentDataSet4.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

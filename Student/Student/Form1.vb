@@ -63,4 +63,28 @@
         'Borrowed Book Report
         borrow_report.Show()
     End Sub
+    Private Sub AddNewToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles AddNewToolStripMenuItem3.Click
+        'Membership Add
+        member_add.Show()
+    End Sub
+    Private Sub ViewToolStripMenuItem5_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem5.Click
+        'Membership View
+        member_view.show()
+    End Sub
+    Private Sub ManageToolStripMenuItem5_Click(sender As Object, e As EventArgs) Handles ManageToolStripMenuItem5.Click
+        'Membership Manage
+        member_manage.show()
+    End Sub
+    Private Sub PrintReportToolStripMenuItem5_Click(sender As Object, e As EventArgs) Handles PrintReportToolStripMenuItem5.Click
+        'Membership Report
+        member_report.show()
+    End Sub
+    Private Sub DepositToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DepositToolStripMenuItem.Click
+        'Deposit
+        deposit.show()
+    End Sub
+    Private Sub HistoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistoryToolStripMenuItem.Click
+        'History
+        history.show()
+    End Sub
 End Class

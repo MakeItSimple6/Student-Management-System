@@ -87,3 +87,8 @@ C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Stude
 C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Student.borrow_view.resources
 C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Student.borrow_report.resources
 C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Student.borrow_manage.resources
+C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Student.member_add.resources
+C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Student.member_view.resources
+C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Student.member_report.resources
+C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Student.member_manage.resources
+C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Student.history.resources

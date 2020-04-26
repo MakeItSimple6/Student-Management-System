@@ -317,6 +317,416 @@ Update Order Option
 Used to sort self-referenced table's rows
 </summary>
 </member>
+<member name="T:Student.studentDataSet3">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.attendanceDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.bookedDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.booksDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.courseDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.feeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.member_cardDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.studentDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.transacDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.attendanceRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.bookedRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.booksRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.courseRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.feeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.member_cardRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.studentRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.transacRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.attendanceRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.bookedRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.booksRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.courseRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.feeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.member_cardRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.studentRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Student.studentDataSet3.transacRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Student.studentDataSet3TableAdapters.attendanceTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3TableAdapters.bookedTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3TableAdapters.booksTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3TableAdapters.courseTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3TableAdapters.feeTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3TableAdapters.member_cardTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3TableAdapters.studentTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3TableAdapters.transacTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Student.studentDataSet3TableAdapters.TableAdapterManager.UpdateUpdatedRows(Student.studentDataSet3,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Student.studentDataSet3TableAdapters.TableAdapterManager.UpdateInsertedRows(Student.studentDataSet3,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Student.studentDataSet3TableAdapters.TableAdapterManager.UpdateDeletedRows(Student.studentDataSet3,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Student.studentDataSet3TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Student.studentDataSet3TableAdapters.TableAdapterManager.UpdateAll(Student.studentDataSet3)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Student.studentDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Student.studentDataSet3TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:Student.studentDataSet4">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.attendanceDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.bookedDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.booksDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.courseDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.feeDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.member_cardDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.studentDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.transacDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.attendanceRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.bookedRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.booksRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.courseRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.feeRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.member_cardRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.studentRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.transacRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.attendanceRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.bookedRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.booksRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.courseRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.feeRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.member_cardRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.studentRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Student.studentDataSet4.transacRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:Student.studentDataSet4TableAdapters.attendanceTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4TableAdapters.bookedTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4TableAdapters.booksTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4TableAdapters.courseTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4TableAdapters.feeTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4TableAdapters.member_cardTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4TableAdapters.studentTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4TableAdapters.transacTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:Student.studentDataSet4TableAdapters.TableAdapterManager.UpdateUpdatedRows(Student.studentDataSet4,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:Student.studentDataSet4TableAdapters.TableAdapterManager.UpdateInsertedRows(Student.studentDataSet4,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:Student.studentDataSet4TableAdapters.TableAdapterManager.UpdateDeletedRows(Student.studentDataSet4,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:Student.studentDataSet4TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:Student.studentDataSet4TableAdapters.TableAdapterManager.UpdateAll(Student.studentDataSet4)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:Student.studentDataSet4TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:Student.studentDataSet4TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 <member name="T:Student.studentDataSet1">
 <summary>
 Represents a strongly typed in-memory cache of data.

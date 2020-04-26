@@ -53,6 +53,9 @@ Partial Class Form1
         Me.ViewToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManageToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PrintReportToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BankToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DepositToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -61,7 +64,7 @@ Partial Class Form1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StudentToolStripMenuItem, Me.TeacherToolStripMenuItem, Me.FeeToolStripMenuItem, Me.AttendanceToolStripMenuItem, Me.BorrowedBookToolStripMenuItem, Me.MembershipCardToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StudentToolStripMenuItem, Me.TeacherToolStripMenuItem, Me.FeeToolStripMenuItem, Me.AttendanceToolStripMenuItem, Me.BorrowedBookToolStripMenuItem, Me.MembershipCardToolStripMenuItem, Me.BankToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1442, 28)
@@ -254,6 +257,25 @@ Partial Class Form1
         Me.PrintReportToolStripMenuItem5.Size = New System.Drawing.Size(171, 26)
         Me.PrintReportToolStripMenuItem5.Text = "Print Report"
         '
+        'BankToolStripMenuItem
+        '
+        Me.BankToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DepositToolStripMenuItem, Me.HistoryToolStripMenuItem})
+        Me.BankToolStripMenuItem.Name = "BankToolStripMenuItem"
+        Me.BankToolStripMenuItem.Size = New System.Drawing.Size(77, 26)
+        Me.BankToolStripMenuItem.Text = "Account"
+        '
+        'DepositToolStripMenuItem
+        '
+        Me.DepositToolStripMenuItem.Name = "DepositToolStripMenuItem"
+        Me.DepositToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.DepositToolStripMenuItem.Text = "Deposit"
+        '
+        'HistoryToolStripMenuItem
+        '
+        Me.HistoryToolStripMenuItem.Name = "HistoryToolStripMenuItem"
+        Me.HistoryToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.HistoryToolStripMenuItem.Text = "History"
+        '
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.DarkSlateGray
@@ -318,4 +340,7 @@ Partial Class Form1
     Friend WithEvents ManageToolStripMenuItem5 As ToolStripMenuItem
     Friend WithEvents PrintReportToolStripMenuItem5 As ToolStripMenuItem
     Friend WithEvents Label1 As Label
+    Friend WithEvents BankToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DepositToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HistoryToolStripMenuItem As ToolStripMenuItem
 End Class
