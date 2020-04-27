@@ -54,7 +54,6 @@ Partial Class Form1
         Me.ManageToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PrintReportToolStripMenuItem5 = New System.Windows.Forms.ToolStripMenuItem()
         Me.BankToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DepositToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HistoryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
@@ -259,16 +258,10 @@ Partial Class Form1
         '
         'BankToolStripMenuItem
         '
-        Me.BankToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DepositToolStripMenuItem, Me.HistoryToolStripMenuItem})
+        Me.BankToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HistoryToolStripMenuItem})
         Me.BankToolStripMenuItem.Name = "BankToolStripMenuItem"
-        Me.BankToolStripMenuItem.Size = New System.Drawing.Size(77, 26)
+        Me.BankToolStripMenuItem.Size = New System.Drawing.Size(77, 24)
         Me.BankToolStripMenuItem.Text = "Account"
-        '
-        'DepositToolStripMenuItem
-        '
-        Me.DepositToolStripMenuItem.Name = "DepositToolStripMenuItem"
-        Me.DepositToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.DepositToolStripMenuItem.Text = "Deposit"
         '
         'HistoryToolStripMenuItem
         '
@@ -341,6 +334,5 @@ Partial Class Form1
     Friend WithEvents PrintReportToolStripMenuItem5 As ToolStripMenuItem
     Friend WithEvents Label1 As Label
     Friend WithEvents BankToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DepositToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HistoryToolStripMenuItem As ToolStripMenuItem
 End Class

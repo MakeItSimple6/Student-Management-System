@@ -79,12 +79,8 @@
         'Membership Report
         member_report.show()
     End Sub
-    Private Sub DepositToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DepositToolStripMenuItem.Click
-        'Deposit
-        deposit.show()
-    End Sub
     Private Sub HistoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistoryToolStripMenuItem.Click
         'History
-        history.show()
+        history.Show()
     End Sub
 End Class
