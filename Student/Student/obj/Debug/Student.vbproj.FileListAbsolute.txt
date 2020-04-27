@@ -92,3 +92,4 @@ C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Stude
 C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Student.member_report.resources
 C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Student.member_manage.resources
 C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Student.history.resources
+C:\Users\Kamar\Desktop\Student Management System\Student\Student\obj\Debug\Student.deposit.resources

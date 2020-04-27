@@ -4,6 +4,7 @@ Public Class fee_add
     Dim constr As String
     Dim command As New OleDbCommand
     Dim student_id As Int32
+    Dim amount As Int32
     Private Sub fee_add_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Fee Add Form Load
         Try
@@ -66,6 +67,7 @@ Public Class fee_add
                 .Open()
                 With command
                     .Connection = con
+
                     'Getting studentid
                     .CommandText = "Select [student_id] from fee where [student_id]=" + ComboBox1.Text
                     Dim date_reader = .ExecuteReader
@@ -73,6 +75,15 @@ Public Class fee_add
                         student_id = date_reader("student_id")
                     End While
                     date_reader.Close()
+
+                    'Getting total amount before transaction
+                    .CommandText = "Select [amount] from member_card where [student_id]=" + ComboBox1.Text
+                    Dim amount_reader = .ExecuteReader
+                    While amount_reader.Read
+                        amount = amount_reader("amount")
+                        amount -= FormatCurrency(TextBox3.Text)
+                    End While
+                    amount_reader.Close()
 
                     If ComboBox1.Text <> student_id Then
                         .Connection = con
@@ -88,6 +99,29 @@ Public Class fee_add
                         MsgBox("Feed added for Student Id : " & ComboBox1.Text & " successfully!")
                         con.Close()
                         .Dispose()
+
+                        'Add this value to transaction
+                        con.Open()
+                        .Connection = con
+                        .CommandText = "Insert into transac([student_id],[description],[withdraw]) values(@student_id,@description,@withdraw)"
+
+                        .Parameters.AddWithValue("@student_id", ComboBox1.Text)
+                        .Parameters.AddWithValue("@description", "Amount has been debited for" & TextBox1.Text & " Fee")
+                        .Parameters.AddWithValue("@withdraw", FormatCurrency(TextBox3.Text))
+
+                        .ExecuteNonQuery()
+                        con.Close()
+                        .Dispose()
+
+                        con.Open()
+                        .Connection = con
+
+                        'Updating paid amount to membercard
+                        .CommandText = "Update member_card set amount='" + FormatCurrency(amount) + "' where student_id=" + ComboBox1.Text
+                        .ExecuteNonQuery()
+                        con.Close()
+                        .Dispose()
+                        MsgBox("Updated Successfully!")
                     Else
                         MsgBox("You already completed for Student Id : " & ComboBox1.Text, MessageBoxIcon.Information)
                         con.Close()
