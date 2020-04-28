@@ -1,5 +1,4 @@
 ﻿Imports System.Data.OleDb
-
 Public Class attendance_add
     Dim con As New OleDbConnection
     Dim constr As String

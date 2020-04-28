@@ -1,4 +1,13 @@
-﻿Public Class Form1
+﻿Imports System.Data.OleDb
+Public Class Form1
+    Dim con As New OleDbConnection
+    Dim constr As String
+    Dim command As New OleDbCommand
+    Dim get_date As Date
+    Dim hour As Int32 = 0
+    Dim minute As Int32 = 0
+    Private listFlDay As New List(Of FlowLayoutPanel)
+    Private currentDate As DateTime = DateTime.Today
     Private Sub AddNewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddNewToolStripMenuItem.Click
         'Student Add 
         student_add.Show()
@@ -69,18 +78,195 @@
     End Sub
     Private Sub ViewToolStripMenuItem5_Click(sender As Object, e As EventArgs) Handles ViewToolStripMenuItem5.Click
         'Membership View
-        member_view.show()
+        member_view.Show()
     End Sub
     Private Sub ManageToolStripMenuItem5_Click(sender As Object, e As EventArgs) Handles ManageToolStripMenuItem5.Click
         'Membership Manage
-        member_manage.show()
+        member_manage.Show()
     End Sub
     Private Sub PrintReportToolStripMenuItem5_Click(sender As Object, e As EventArgs) Handles PrintReportToolStripMenuItem5.Click
         'Membership Report
-        member_report.show()
+        member_report.Show()
     End Sub
     Private Sub HistoryToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HistoryToolStripMenuItem.Click
         'History
         history.Show()
     End Sub
+
+    '
+    'From here onwards, Calender Coding started
+    '
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Main Form Load
+        GenerateDayPanel(42)
+        DisplayCurrentDate()
+        'To Generate Report
+        'Report()
+    End Sub
+
+    Private Sub GenerateDayPanel(ByVal totalDays As Integer)
+        'Allocating space for Days Slot
+        FlowLayoutPanel1.Controls.Clear()
+        listFlDay.Clear()
+        For i As Integer = 1 To totalDays
+            Dim flow As New FlowLayoutPanel
+            flow.Name = $"FlowLayoutPanel{i}"
+            flow.Size = New Size(128, 99)
+            flow.BackColor = Color.White
+            flow.BorderStyle = BorderStyle.Fixed3D
+            flow.Cursor = Cursors.Hand
+            flow.AutoScroll = True
+
+            'Calling New Appointment Window
+            AddHandler flow.Click, AddressOf AddNewReminder
+            FlowLayoutPanel1.Controls.Add(flow)
+            listFlDay.Add(flow)
+        Next
+    End Sub
+
+    Private Sub AddNewReminder(ByVal sender As Object, e As EventArgs)
+        'Going to Form2 to collect details of the event
+        Dim day As Integer = CType(sender, FlowLayoutPanel).Tag
+        If day <> 0 Then
+            With Form2
+                .AppID = 0
+                .TextBox1.Text = ""
+                .TextBox2.Text = ""
+                .ComboBox1.Text = ""
+                .DateTimePicker1.Value = New Date(currentDate.Year, currentDate.Month, day)
+                .ShowDialog()
+            End With
+            DisplayCurrentDate()
+        End If
+    End Sub
+
+    Private Sub DisplayCurrentDate()
+        'Displaying the current month date
+        lblMonthAndYear.Text = currentDate.ToString("MMMM, yyyy")
+        Dim firstDayAtFlowNumber As Integer = GetFirstDayOfWeekOfCurrentDate()
+        Dim totalDay As Integer = GetTotalDaysOfCurrentDate()
+        AddLabelDayToFlDay(firstDayAtFlowNumber, totalDay)
+        AddReminderToFlDay(firstDayAtFlowNumber)
+    End Sub
+
+    Private Function GetFirstDayOfWeekOfCurrentDate() As Integer
+        'Getting 1st day of the Week of current Date
+        Dim firstDayOfMonth As DateTime = New Date(currentDate.Year, currentDate.Month, 1)
+        Return firstDayOfMonth.DayOfWeek + 1
+    End Function
+
+    Private Function GetTotalDaysOfCurrentDate() As Integer
+        'Getting total number day of the Week of current Date
+        Dim firstDayOfCurrentDate As DateTime = New Date(currentDate.Year, currentDate.Month, 1)
+        Return firstDayOfCurrentDate.AddMonths(1).AddDays(-1).Day
+    End Function
+
+    Private Sub AddLabelDayToFlDay(ByVal startDayAtFlNumber As Integer, ByVal totalDaysInMonth As Integer)
+        'Adding Date of the Month to every label
+        For Each fl As FlowLayoutPanel In listFlDay
+            fl.Controls.Clear()
+            fl.Tag = 0
+            fl.BackColor = Color.White
+        Next
+
+        For i As Integer = 1 To totalDaysInMonth
+            Dim lbl As New Label
+            lbl.Name = $"lblDay{i}"
+            lbl.AutoSize = False
+            lbl.TextAlign = ContentAlignment.MiddleRight
+            lbl.Size = New Size(110, 22)
+            lbl.Text = i
+            lbl.Font = New Font("Microsoft Sans Serif", 12)
+            listFlDay((i - 1) + (startDayAtFlNumber - 1)).Tag = i
+            listFlDay((i - 1) + (startDayAtFlNumber - 1)).Controls.Add(lbl)
+
+            'Higlighting the current Day
+            If New Date(currentDate.Year, currentDate.Month, i) = Date.Today Then
+                listFlDay((i - 1) + (startDayAtFlNumber - 1)).BackColor = Color.Gray
+            End If
+        Next
+    End Sub
+
+    Private Sub AddReminderToFlDay(ByVal startDayAtFlNumber As Integer)
+        'Displaying already stored reminders
+        Try
+
+            Dim startDate As DateTime = New Date(currentDate.Year, currentDate.Month, 1)
+            Dim endDate As DateTime = startDate.AddMonths(1).AddDays(-1)
+
+            With con
+                .ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Kamar\Desktop\Student Management System\student.accdb"
+                .Open()
+
+                With command
+                    .Connection = con
+                    .CommandText = "SELECT * from calendar where date_ Between #" &
+                                            startDate.ToString("MM/dd/yyyy") & "# And #" &
+                                            endDate.ToString("MM/dd/yyyy") & "#"
+                    Dim reader1 = .ExecuteReader
+
+                    While reader1.Read
+                        Dim appDay As DateTime = DateTime.Parse(reader1("date_"))
+                        Dim link As New LinkLabel
+                        link.Tag = reader1("ID")
+                        link.Name = $"link{reader1("ID")}"
+                        link.Text = reader1("title")
+                        'When clicking text of message we can edit that message
+                        AddHandler link.Click, AddressOf ShowAppointmentDetail
+                        listFlDay((appDay.Day - 1) + (startDayAtFlNumber - 1)).Controls.Add(link)
+                    End While
+                    reader1.Close()
+                End With
+                .Close()
+                command.Dispose()
+            End With
+        Catch ex As Exception
+            MsgBox("Error:" + ex.Message.ToString, MessageBoxIcon.Error)
+            con.Close()
+            Me.Close
+        End Try
+    End Sub
+
+    Private Sub ShowAppointmentDetail(sender As Object, e As EventArgs)
+        'This will allow you to edit the existing data by
+        'display it to the Form2
+        Dim appID As Integer = CType(sender, LinkLabel).Tag
+        Dim sql As String = $"select * from calendar where ID = {appID}"
+        Dim da As New OleDbDataAdapter(sql, con)
+        Dim ds As New DataSet
+        da.Fill(ds, "result")
+        Dim dt As DataTable = ds.Tables("result")
+
+        If dt.Rows.Count > 0 Then
+            Dim row As DataRow = dt.Rows(0)
+            With Form2
+                .AppID = appID
+                .TextBox1.Text = row("title")
+                .TextBox2.Text = row("details")
+                .ComboBox1.Text = row("student_id")
+                .DateTimePicker1.Value = row("date_")
+                .ShowDialog()
+            End With
+            DisplayCurrentDate()
+        End If
+    End Sub
+
+    Private Sub btnPrevMonth_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'Refreshing The display for Previous Month
+        currentDate = currentDate.AddMonths(-1)
+        DisplayCurrentDate()
+    End Sub
+
+    Private Sub btnNextMonth_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        'Refreshing The display for Next Month
+        currentDate = currentDate.AddMonths(1)
+        DisplayCurrentDate()
+    End Sub
+
+    Private Sub btnToday_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        'Refreshing The display for Today
+        currentDate = DateTime.Today
+        DisplayCurrentDate()
+    End Sub
+
 End Class
