@@ -101,7 +101,94 @@ Public Class Form1
         GenerateDayPanel(42)
         DisplayCurrentDate()
         'To Generate Report
-        'Report()
+        Report()
+    End Sub
+
+    Private Sub Report()
+        Try
+            Dim count_student As Int32 = 0
+            Dim cs As Int32 = 0
+            Dim ct As Int32 = 0
+            Dim ca As Int32 = 0
+            Dim it As Int32 = 0
+            Dim se As Int32 = 0
+            Dim present As Int32 = 0
+            Dim absent As Int32 = 0
+            Dim late As Int32 = 0
+            Dim sick As Int32 = 0
+            With con
+                .ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Kamar\Desktop\Student Management System\student.accdb"
+                .Open()
+
+                With command
+                    'Getting Total number of Student and per course
+                    .Connection = con
+                    .CommandText = "Select [id],[course] from student"
+                    Dim reader1 = .ExecuteReader
+                    While reader1.Read
+                        If reader1("id") Then
+                            count_student += 1
+                        End If
+                        If reader1("course").ToString = "Computer Science" Then
+                            cs += 1
+                        End If
+                        If reader1("course").ToString = "Computer Technology" Then
+                            ct += 1
+                        End If
+                        If reader1("course").ToString = "Computer Application" Then
+                            ca += 1
+                        End If
+                        If reader1("course").ToString = "Information Technology" Then
+                            it += 1
+                        End If
+                        If reader1("course").ToString = "Software Engineering" Then
+                            se += 1
+                        End If
+                    End While
+                    reader1.Close()
+                    con.Close()
+                    command.Dispose()
+
+                    'Finding Status(Present/Absent....) for total class
+                    Dim startDate As DateTime = New Date(currentDate.Year, currentDate.Month, currentDate.Day)
+
+                    con.Open
+                    .Connection = con
+                    .CommandText = "SELECT * from attendance where date_ like '%" & startDate & "'"
+                    Dim reader2 = .ExecuteReader
+                    While reader2.Read
+                        If reader2("status").ToString = "Present" Then
+                            present += 1
+                        End If
+                        If reader2("status").ToString = "Absent" Then
+                            absent += 1
+                        End If
+                        If reader2("status").ToString = "Sick" Then
+                            sick += 1
+                        End If
+                        If reader2("status").ToString = "Late" Then
+                            late += 1
+                        End If
+                    End While
+                    reader2.Close()
+                    con.Close()
+                    command.Dispose()
+                End With
+                'Generating the Totals of attendance, student & per course...
+                Label8.Text = "Present : " & present
+                Label9.Text = "Absent : " & absent
+                Label10.Text = "Late : " & late
+                Label11.Text = "Sick : " & sick
+                Label12.Text = "Total Number of Student : " & count_student
+                Label13.Text = "Computer Science : " & cs & Environment.NewLine &
+                                "Computer Technology : " & ct & Environment.NewLine &
+                                "Computer Application : " & ca & Environment.NewLine &
+                                "Information Technology : " & it & Environment.NewLine &
+                                "Software Engineering : " & se & Environment.NewLine
+            End With
+        Catch ex As Exception
+            MsgBox("Error : " + ex.Message.ToString(), MessageBoxIcon.Error)
+        End Try
     End Sub
 
     Private Sub GenerateDayPanel(ByVal totalDays As Integer)
